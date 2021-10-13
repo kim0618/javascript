@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	
+
+
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		var x = 5
+		var y = "5"
+		document.write("x == y : "+(x == y)+"<br>")		// 값만 신경쓴다
+		document.write("x != y : "+(x != y)+"<br>")
+		
+		document.write("x == y : "+(x === y)+"<br>")	// type까지 신경쓴다(문자 숫자구분)
+		document.write("x != y : "+(x !== y)+"<br>")
+	
+		var gender = "M"
+		var age = 21
+		if(gender == "M"){
+			if(age >= 19){
+				var result = "남자 성인입니다"
+			}
+		}else{
+			var result = "여성입니다"
+		}
+		document.write(result+"<br>")
+		
+		var day
+		var week = new Date().getDay(); // 0(일요일) ~ 6(토요일)
+		switch(week){
+		case 0: day="일요일"; break;
+		case 1: day="월요일"; break;
+		case 2: day="화요일"; break;
+		case 3: day="수요일"; break;
+		case 4: day="목요일"; break;
+		case 5: day="금요일"; break;
+		case 6: day="토요일"; break;
+		}
+		document.write(day + "입니다<br>")
+		
+		for(x=2; x<=5; x++){
+			for(y=1; y<=9; y++){
+				document.write(x + "*" + y + "=" + x*y + "<br>")
+			}
+		}
+		
+		var x = 1
+		var sum = 0
+		while(x<=100){
+			sum+=x
+			x++
+		}
+		document.write(sum)
+		
+		var b = prompt('아파트 층 수 입력 ')
+		for(a=1; a<=b; a++ ){
+			document.write("<table border='1'><tr>")
+			document.write("<td>"+a+"01호"+"</td> <td>"+a+"02호"+"</td> <td>"+a+"03호"+"</td><td>"+a+"04호"+"</td></tr>")
+			document.write("<br>")
+		}
+		
+		
+		var num = prompt('아파트 층')
+		document.write("<table border='1'>");	// 테이블 열어주고 border
+		for(;num>0;num--){						// num의 횟수만큼
+			document.write("<tr>");				// tr만들어주기
+			for(j=1;j<5;j++){					// 4호까지
+				document.write("<td>"+(num*100+j)+"호</td>");
+			}
+			document.write("</tr>");			// 한줄 끝나니 tr 닫아주고
+		}
+		document.write("</table>");				// 반복문 끝나면 table 닫기
+		
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
