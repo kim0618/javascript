@@ -23,8 +23,8 @@ img{width:100px;height:100px;}
 	        img.src="images/"+name+".jpg";
 	        rp2.appendChild(img)
    		}else{
-   			rp2.innerHTML = ""
-   			arr.shift();
+   			rp2.innerHTML = ""		// 비워지고
+   			arr.shift();			// 앞에서부터 뺴라
    			for(i=0;i<arr.length;i++){
 	   			var img=document.createElement('img'); 
 	   			img.src="images/"+ arr[i] +".jpg";
